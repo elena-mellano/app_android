@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Yumba</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="titleStatus">Status</string>
+    <string name="hintText">Please Enter your State</string>
+    <string name="buttonUpdate">Update</string>
+    <string name="titlePrefs">Preferencia</string>
+    <string name="titleUsername">Username</string>
+    <string name="summaryUsername">summaryUsername</string>
+    <string name="titlePassword">Password</string>
+    <string name="summaryPassword">summaryPassword</string>
+    <string name="titleApiRoot">ApiRoot</string>
+    <string name="summaryApiRoot">summaryApiRoot</string>
+
+    <string name="buttonTodos">Todos</string>
+    <string name="titlelist">All Status</string>
+
+</resources>
