@@ -10,7 +10,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.Cursor;
 import android.content.ContentValues;
-import android.preference.PreferenceManager;
 
 
 public class MyDb {
@@ -108,9 +107,7 @@ public class MyDb {
         @Override
 
         public void onUpgrade(SQLiteDatabase _db, int oldVersion, int newVersion) {
-
 //qui mettiamo eventuali modifiche al db, se nella nostra nuova versione della app, il db cambia numero di versione
-
         }
 
     }
