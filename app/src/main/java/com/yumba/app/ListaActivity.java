@@ -1,6 +1,7 @@
 package com.yumba.app;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -53,4 +54,11 @@ public class ListaActivity extends Activity {
 
 
 }
+
+    public void onBackPressed() {
+        Intent start=new Intent(ListaActivity.this , MainActivity.class);
+        startActivity(start); //
+        return;
+    }
+
 }

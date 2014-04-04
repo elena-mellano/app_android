@@ -59,7 +59,18 @@ public class MyDb {
         mDb.insert(StatusMetaData.STATUS_TABLE, null, cv);
 
     }
+    public void updateStatus(String title,String title_new){ //metodo per inserire i dati
 
+        ContentValues cv=new ContentValues();
+        cv.put(StatusMetaData.STATUS_STATUS_KEY,title_new);
+        mDb.update(StatusMetaData.STATUS_TABLE, cv, StatusMetaData.STATUS_STATUS_KEY + "= '" + title + "'", null);
+
+    }
+    public void deleteStatus(String title){ //metodo per inserire i dati
+
+        mDb.delete(StatusMetaData.STATUS_TABLE, StatusMetaData.STATUS_STATUS_KEY +"= '" + title+"'" ,null);
+
+    }
     public Cursor fetchProducts(String name){ //metodo per fare la query di tutti i dati
 
             return(mDb.query(StatusMetaData.STATUS_TABLE,null,StatusMetaData.STATUS_NAME_KEY+" = '"+name+"'",null,null,null,null));
