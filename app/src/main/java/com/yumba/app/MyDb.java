@@ -77,6 +77,12 @@ public class MyDb {
 
     }
 
+    public Cursor allProducts(){ //metodo per fare la query di tutti i dati
+
+        return(mDb.query(StatusMetaData.STATUS_TABLE,null,null,null,null,null,null));
+
+    }
+
     static class StatusMetaData {  // i metadati della tabella, accessibili ovunque
 
         static final String STATUS_TABLE = "status";

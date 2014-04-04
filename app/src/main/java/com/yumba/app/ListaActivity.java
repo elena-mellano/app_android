@@ -29,7 +29,7 @@ public class ListaActivity extends Activity {
 
 
         pref = PreferenceManager.getDefaultSharedPreferences(this);
-        Cursor c=db.fetchProducts(pref.getString("username","")); // Creiamo un cursore con tutti i dati del db
+        Cursor c=db.allProducts(); // Creiamo un cursore con tutti i dati del db
 
         startManagingCursor(c);
 
@@ -37,13 +37,13 @@ public class ListaActivity extends Activity {
 
                 this,
 
-                R.layout.stato, //il layout di ogni riga/prodotto
+                R.layout.all, //il layout di ogni riga/prodotto
 
                 c,
 
-                new String[]{MyDb.StatusMetaData.STATUS_STATUS_KEY},//queste colonne
+                new String[]{MyDb.StatusMetaData.STATUS_STATUS_KEY, MyDb.StatusMetaData.STATUS_NAME_KEY},//queste colonne
 
-                new int[]{R.id.ageTv});//in queste textView
+                new int[]{R.id.pref, R.id.cat});//in queste textView
 
        status.setAdapter(adapter); //L'adapter per la lista*/
 
