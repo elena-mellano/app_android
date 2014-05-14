@@ -97,7 +97,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         db.open();  //apriamo il db
         pref = PreferenceManager.getDefaultSharedPreferences(this);
         Cursor c=db.fetchProducts(pref.getString("username","")); // Creiamo un cursore con tutti i dati del db
-        startManagingCursor(c);
 
         SimpleCursorAdapter adapter=new SimpleCursorAdapter( //semplice adapter per i cursor
                 this,
@@ -122,10 +121,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         db.close();
     }
 
-
-
-
-
     // Called when button is clicked //
     public void onClick(View v) {
         stringa=(editText.getText().toString()); //
@@ -148,7 +143,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ListView status=(ListView)findViewById(R.id.peopleLv);
         pref = PreferenceManager.getDefaultSharedPreferences(this);
         Cursor c=db.fetchProducts(pref.getString("username","")); // Creiamo un cursore con tutti i dati del db
-        startManagingCursor(c);
+
         SimpleCursorAdapter adapter=new SimpleCursorAdapter( //semplice adapter per i cursor
                 this,
                 R.layout.stato, //il layout di ogni riga/prodotto
@@ -158,6 +153,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         status.setAdapter(adapter); //L'adapter per la lista*/
         db.close();
         editText.setText("");
+
 
 
 

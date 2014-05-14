@@ -31,8 +31,6 @@ public class ListaActivity extends Activity {
         pref = PreferenceManager.getDefaultSharedPreferences(this);
         Cursor c=db.allProducts(); // Creiamo un cursore con tutti i dati del db
 
-        startManagingCursor(c);
-
         SimpleCursorAdapter adapter=new SimpleCursorAdapter( //semplice adapter per i cursor
 
                 this,
